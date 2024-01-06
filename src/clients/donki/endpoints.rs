@@ -1,0 +1,9 @@
+pub const CME_BASE_URL: &'static str = "https://api.nasa.gov/DONKI/CME";
+pub const IPS_BASE_URL: &'static str = "https://api.nasa.gov/DONKI/IPS";
+pub const FLR_BASE_URL: &'static str = "https://api.nasa.gov/DONKI/FLR";
+pub const GST_BASE_URL: &'static str = "https://api.nasa.gov/DONKI/GST";
+pub const SEP_BASE_URL: &'static str = "https://api.nasa.gov/DONKI/SEP";
+pub const MPC_BASE_URL: &'static str = "https://api.nasa.gov/DONKI/MPC";
+pub const RBE_BASE_URL: &'static str = "https://api.nasa.gov/DONKI/RBE";
+pub const HSS_BASE_URL: &'static str = "https://api.nasa.gov/DONKI/HSS";
+pub const WSA_BASE_URL: &'static str = "https://api.nasa.gov/DONKI/WSAEnlilSimulations";

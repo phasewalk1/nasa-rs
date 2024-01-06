@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
-use crate::prelude::*;
-use serde::{Deserialize, Serialize};
+use super::endpoints::CME_BASE_URL;
+use crate::{prelude::*, query::QueryValues};
+use serde::Serialize;
 
 #[derive(Debug, Clone, Serialize)]
 #[serde(rename_all = "UPPERCASE")]
@@ -87,13 +88,8 @@ impl QueryValues for CmeAnalysisParams {
 pub struct CmeAnalysis;
 
 impl Spec for CmeAnalysis {
-    const BASE_URL: &'static str = "https://api.nasa.gov/DONKI/CME";
+    const BASE_URL: &'static str = CME_BASE_URL;
     type Params = CmeAnalysisParams;
-
-
-    fn build_query(params: &Self::Params) -> String {
-        todo!()
-    }
 
     fn parse_response(res: reqwest::blocking::Response) -> Self::ResponseType {
         res.json().unwrap()

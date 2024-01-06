@@ -1,9 +1,9 @@
-use nasa_rs::clients::{Apod, ApodParams};
-use nasa_rs::prelude::{Client, *};
+use nasa_rs::{params::ApodParams, prelude::*, Apod};
 
 fn main() {
-    let client = Client::<Apod>::default();
-    let params = ApodParams::Date("2020-01-01");
+    let client = Apod::default();
+    // Use today's date
+    let params = ApodParams::default();
     let response = client.query(&params).unwrap();
     println!("{}", response);
 }
